@@ -1,0 +1,79 @@
+$color__nav__font: #162956;
+$color__header_bg: #FFFFFF;
+$color__cart-count:#FF2846;
+$white:#FFF;
+
+// header styles
+.nav {
+    width:100%;
+    display:block;
+    height: 109px;
+    background-color: $color__header_bg;
+    padding:48px 56px;
+
+    ul {
+        list-style-type: none;
+        display:inline-block;
+        &.nav__left{
+            float:left;
+        }
+        &.nav__right{
+            float:right;
+        }
+        li {
+            display:inline-block;
+            height: 13px;
+            color: $color__nav__font;
+            font-family: Lato;
+            font-size: 1em;
+            line-height: 24px;
+            text-transform: uppercase;
+            padding-right:30px;
+            &:last-child{
+                padding:0;
+            }
+            &.mycart{
+                .fa-shopping-cart:before{
+                    padding-left:10px;
+                    height: 24px;
+                    width: 27px;
+                    color: #162956;
+                }
+                .cart-count{
+                    height: 24px;
+                    width: 24px;
+                    background:$color__cart-count;
+                    border-radius: 50%;
+                    position:relative;
+                    top:-12px;
+                    left:-4px;
+                    color:$white;
+                    font-family: Lato;
+                    font-size: 14px;
+                    line-height:24px;
+                    padding:4px 7px 5px 6px;
+                }
+            }
+        }
+        
+    }
+    .wine-merchant-logo {
+        height: 121px;
+        width: 123px;
+        text-align: center;
+        margin:0 auto;
+        .row{
+        margin:0 auto;
+        text-align:center;
+        display:block;
+        }
+        .circle__solid__red{
+            display:inline-block;
+            border-radius: 50%;
+            height:0;
+            width:0;
+            border:6px solid #FF2846;
+        }
+    }
+}
+    
