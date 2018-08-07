@@ -29,8 +29,9 @@ nav.nav
 
 .search-container
     form.search-bg
-        input.search__text(type='text' placeholder='Search "What's the best wine to go with pasta?"')
-        .search__btn SEARCH
+        label.search__text
+        input.search__text(type='text', id='searchitem', name='searchitem', placeholder='Search "What\'s the best wine to go with pasta?"')
+        button(type='submit').search__btn SEARCH
 
     
 
