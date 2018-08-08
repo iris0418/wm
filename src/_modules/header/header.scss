@@ -4,6 +4,47 @@ $color__cart-count:#FF2846;
 $white:#FFF;
 $black: #000;
 
+//reuse components
+.wine-merchant-logo {
+    height: 121px;
+    width: 123px;
+    text-align: center;
+    margin:0 auto;
+    left: calc(50% - 123px / 2);
+    z-index: 5;
+
+    .row{
+    margin:0 auto;
+    text-align:center;
+    display:block;
+
+    .circle__solid__red{
+        display:inline-block;
+        border-radius: 50%;
+        height:0;
+        width:0;
+        border:6px solid #FF2846;
+    }
+    }
+    
+    .wmlogo-wine {
+        font-size:2em;
+        color:$color__nav__font;
+    }
+    .wmlogo-merchant {
+        font-size:0.5em;
+        color:$color__nav__font;
+    }
+}
+
+.shadow__box {
+    border: 2px solid rgba(0,0,0,0.1);
+    background-color:$white;
+    box-shadow: 0 0 40px 5px rgba(0,0,0,0.1);
+}
+
+
+
 // header styles
 .nav {
     width:100%;
@@ -57,39 +98,10 @@ $black: #000;
                 }
             }
         }
-        
     }
     .wine-merchant-logo {
-        height: 121px;
-        width: 123px;
-        text-align: center;
-        margin:0 auto;
         position: absolute;
         top:20px;
-        left: calc(50% - 123px / 2);
-
-        .row{
-        margin:0 auto;
-        text-align:center;
-        display:block;
-
-        .circle__solid__red{
-            display:inline-block;
-            border-radius: 50%;
-            height:0;
-            width:0;
-            border:6px solid #FF2846;
-        }
-        }
-        
-        .wmlogo-wine {
-            font-size:2em;
-            color:$color__nav__font;
-        }
-        .wmlogo-merchant {
-            font-size:0.5em;
-            color:$color__nav__font;
-        }
     }
 }
     
@@ -139,11 +151,9 @@ $black: #000;
     text-align: center;
 
     .search-bg {
+        @extend .shadow__box;
         min-height: 80px;
         max-width: 100%;
-        border: 2px solid rgba(0,0,0,0.1);
-        background-color:$white;
-        box-shadow: 0 0 40px 5px rgba(0,0,0,0.1);
         position: relative;
         top: 30px;
         margin: 0 30px;
@@ -172,22 +182,25 @@ $black: #000;
             font-family: Montserrat;
             font-size: 1.25em;
             font-weight: 300;
+            padding:0 5px;
             border:none;
             overflow: auto;
         }
         .search__btn {
-            display:inline-block;
+            @include btn;
+            // display:inline-block;
             height: 48px;
             width: 120px;
-            background-color: $color__cart-count;
-            font-family: Lato;
-            font-size: 1em;
-            text-align: center;
-            color:$white;
-            margin-left: 1em;
-            &:hover {
-                background-color: darken($color__cart-count,20);
-            }
+            // background-color: $color__cart-count;
+            // font-family: Lato;
+            // font-size: 1em;
+            // text-align: center;
+            // color:$white;
+            // margin-left: 1em;
+            // border:none;
+            // &:hover {
+            //     background-color: darken($color__cart-count,20);
+            // }
         }
     }
 }

@@ -1,10 +1,6 @@
 // Normalize Styles
 @import 'node_modules/normalize.css/normalize';
 
-// Import Modules
-@import '../_modules/link/link';
-@import '../_modules/header/header';
-
 // fontawesome
 @font-face {
   font-family: 'FontAwesome';
@@ -54,3 +50,10 @@
   color: #000;
   padding: 0.5em 0;
 }
+
+// Import Modules
+@import '../_modules/link/link';
+@import '../_modules/header/header';
+@import '../_modules/footer/footer';
+@import '../_modules/mixins';
+

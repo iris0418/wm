@@ -1,0 +1,14 @@
+// mixins styles
+@mixin btn($color__bg:$color__cart-count,$color__font:$white) {
+    display:inline-block;
+    background-color: $color__bg;
+    font-family: Lato;
+    font-size: 1em;
+    text-align: center;
+    color:$color__font;
+    margin-left: 1em;
+    border:none;
+    &:hover {
+        background-color: darken($color__bg,20);
+    }
+}

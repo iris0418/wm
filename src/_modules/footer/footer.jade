@@ -1,6 +1,4 @@
-mixin footer(spec)
-  - spec = spec || {}
-  - spec.__class = spec.__class || ''
+footer.footer-bg
+  .footer__container
+    +wm_logo.footer__list
 
-  div(class=spec.__class)&attributes(attributes)
-    p This is an example paragraph for the footer module

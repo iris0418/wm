@@ -1,39 +1,47 @@
-nav.nav
-    ul.nav__left
-        li find a store
-        li wine clue
-        li winemakers
-    ul.nav__right
-        li shop
-        li login
-        li.mycart my cart
-            i.fas.fa-shopping-cart
-            span.cart-count 12
-    .wine-merchant-logo
-        .row
-            .circle__solid__red
-            .circle__solid__red
-            .circle__solid__red
-        .row
-            .circle__solid__red
-            .circle__solid__red
-        .row
-            .circle__solid__red
-        p.wmlogo-wine WINE
-        p.wmlogo-merchant MERCHANT
+header    
+    nav.nav(role='navigation')
+        ul.nav__left
+            li find a store
+            li wine clue
+            li winemakers
+        mixin wm_logo
+            .wine-merchant-logo
+                .row
+                    .circle__solid__red
+                    .circle__solid__red
+                    .circle__solid__red
+                .row
+                    .circle__solid__red
+                    .circle__solid__red
+                .row
+                    .circle__solid__red
+                p.wmlogo-wine WINE
+                p.wmlogo-merchant MERCHANT
+        ul.nav__right
+            li shop
+            li login
+            li.mycart my cart
+                i.fas.fa-shopping-cart
+                span.cart-count 12
+        +wm_logo
 
-.hero-png
-    h1 The best independent and speicalty wines
-    .hero__btn 
-        p SHOP NOW
+    .hero-png
+        h1 The best independent and speicalty wines
+        .hero__btn 
+            p SHOP NOW
 
-.search-container
-    form.search-bg
-        label.search__text
-        input.search__text(type='text', id='searchitem', name='searchitem', placeholder='Search "What\'s the best wine to go with pasta?"')
-        button(type='submit').search__btn SEARCH
+    .search-container
+        form.search-bg
+            label.search__text
+            input.search__text(
+                type='text'
+                id='searchitem'
+                name='searchitem'
+                placeholder='Search "What\'s the best wine to go with pasta?"'
+                )
+            button(type='submit').search__btn SEARCH
 
-    
+        
 
             
 

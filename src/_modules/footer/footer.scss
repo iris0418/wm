@@ -1,1 +1,31 @@
 // footer styles
+$color_header:#383737;
+footer {
+    &.footer-bg {
+        min-height: 379px;
+        width: 100%;
+        background-color:transparentize(#D7DBE6,0.8);
+    }
+    .footer__container {
+        width:80%;
+        display:flex;
+        flex-direction: row;
+        .footer__list {
+            h3 {
+                color: $color_header;	
+                font-family: Montserrat;
+                font-size: 1.25em;
+                font-weight: 500;
+                line-height: 1.5em;
+            }
+            .footer__items {
+                padding-top:35px;
+                color: #2D2D2D;
+                font-family: Lato;	
+                font-size: 1em;	
+                line-height: calc(24px / 16px)em;
+            }
+        }    
+    }
+}
+
