@@ -14,7 +14,7 @@ mixin wm_logo
 
 mixin navlist(nav_list)
     li
-        a(href=nav_list.link, class="float-#{nav_list.position}")= nav_list.name
+        a(href=nav_list.link)= nav_list.name
         if nav_list.sub.length > 0
             ul
                 each nav_list_lv2 in nav_list.sub

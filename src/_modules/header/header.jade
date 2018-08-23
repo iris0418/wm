@@ -5,13 +5,21 @@ mixin header(spec)
   - spec.__class = spec.__class || ''
     header    
         nav.nav(role='navigation')
-            ul
+            ul.nav__left
                 each menu in site.data.nav
-                    +navlist(menu)
-                li.mycart
-                    i.fas.fa-shopping-cart
-                    span.cart-count 12
+                    if menu.position == 'left'
+                        +navlist(menu)
             +wm_logo
+            ul.nav__right
+                each menu in site.data.nav
+                    if menu.position == 'right'
+                        +navlist(menu)
+                li.mycart
+                    a(href="")
+                        | my cart
+                        i.fas.fa-shopping-cart
+                        span.cart-count 12
+            
 
         .hero-png
             h1 The best independent and speicalty wines

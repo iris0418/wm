@@ -1,5 +1,6 @@
 // Normalize Styles
 @import 'node_modules/normalize.css/normalize';
+@import '../_modules/mixins/mixins';
 
 // fontawesome
 @font-face {
@@ -51,9 +52,9 @@
   padding: 0.5em 0;
 }
 
+
+
 // Import Modules
 @import '../_modules/link/link';
 @import '../_modules/header/header';
 @import '../_modules/footer/footer';
-@import '../_modules/mixins';
-
