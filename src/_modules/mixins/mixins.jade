@@ -1,6 +1,21 @@
-mixin mixins(spec)
-  - spec = spec || {}
-  - spec.__class = spec.__class || ''
+mixin wm_logo
+  .wine-merchant-logo
+      .row
+          .circle__solid__red
+          .circle__solid__red
+          .circle__solid__red
+      .row
+          .circle__solid__red
+          .circle__solid__red
+      .row
+          .circle__solid__red
+      p.wmlogo-wine WINE
+      p.wmlogo-merchant MERCHANT
 
-  div(class=spec.__class)&attributes(attributes)
-    p This is an example paragraph for the mixins module
+mixin navlist(nav_list)
+    li
+        a(href=nav_list.link, class="float-#{nav_list.position}")= nav_list.name
+        if nav_list.sub.length > 0
+            ul
+                each nav_list_lv2 in nav_list.sub
+                    +navlist(nav_list_lv2)

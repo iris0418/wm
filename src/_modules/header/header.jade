@@ -1,45 +1,33 @@
-header    
-    nav.nav(role='navigation')
-        ul.nav__left
-            li find a store
-            li wine clue
-            li winemakers
-        mixin wm_logo
-            .wine-merchant-logo
-                .row
-                    .circle__solid__red
-                    .circle__solid__red
-                    .circle__solid__red
-                .row
-                    .circle__solid__red
-                    .circle__solid__red
-                .row
-                    .circle__solid__red
-                p.wmlogo-wine WINE
-                p.wmlogo-merchant MERCHANT
-        ul.nav__right
-            li shop
-            li login
-            li.mycart my cart
-                i.fas.fa-shopping-cart
-                span.cart-count 12
-        +wm_logo
+include ../../_modules/mixins/mixins
 
-    .hero-png
-        h1 The best independent and speicalty wines
-        .hero__btn 
-            p SHOP NOW
+mixin header(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+    header    
+        nav.nav(role='navigation')
+            ul
+                each menu in site.data.nav
+                    +navlist(menu)
+                li.mycart
+                    i.fas.fa-shopping-cart
+                    span.cart-count 12
+            +wm_logo
 
-    .search-container
-        form.search-bg
-            label.search__text
-            input.search__text(
-                type='text'
-                id='searchitem'
-                name='searchitem'
-                placeholder='Search "What\'s the best wine to go with pasta?"'
-                )
-            button(type='submit').search__btn SEARCH
+        .hero-png
+            h1 The best independent and speicalty wines
+            .hero__btn 
+                p SHOP NOW
+
+        .search-container
+            form.search-bg
+                label.search__text
+                input.search__text(
+                    type='text'
+                    id='searchitem'
+                    name='searchitem'
+                    placeholder='Search "What\'s the best wine to go with pasta?"'
+                    )
+                button(type='submit').search__btn SEARCH
 
         
 

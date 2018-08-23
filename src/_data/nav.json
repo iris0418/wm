@@ -2,50 +2,38 @@
     {
         "name":"find a store",
         "link":"#",
-        "icon":"",
-        "sub":null
+        "position":"left",
+        "sub":[]
     },
     {
         "name":"wine club",
         "link":"#",
-        "icon":"",
-        "sub":[
-            {"name":"wine club-1",
-                "link":"#",
-                "icon":"",
-                "sub":null
-            },
-            {"name":"wine club-2",
-                "link":"#",
-                "icon":"",
-                "sub":null
-            },
-            {"name":"wine club-3",
-                "link":"#",
-                "icon":"",
-                "sub":null
-            }
-        ]
+        "position":"left",
+        "sub":[]
 
     },
     {
         "name":"winemakers",
         "link":"#",
-        "icon":""
+        "position":"left",
+        "sub":[]
     },
     {
         "name":"shop",
         "link":"#",
-        "icon":""
+        "position":"right",
+        "sub":[]
     },
     {
         "name":"login",
         "link":"#",
-        "icon":""
+        "position":"right",
+        "sub":[]
     },
     {
         "name":"my cart",
         "link":"#",
-        "icon":""
+        "position":"right",
+        "sub":[]
     }
 ]
