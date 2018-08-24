@@ -2,5 +2,53 @@ include ../../_modules/mixins/mixins
 
 footer.footer-bg
   .footer__container
-    +wm_logo.footer__list
+    .footer_section
+      +wm_logo.footer__list
+    .footer_section
+      h3 Help &amp; Services
+      ul
+        li
+          a(href="#") Help center
+        li
+          a(href="#") Contact us
+        li
+          a(href="#") My Wine Merchant
+        li
+          a(href="#") Deliver option
+        li
+          a(href="#") Corporate orders
+    .footer_section
+      h3 Shop Wine
+      ul
+        li
+          a(href="#") Red wine
+        li
+          a(href="#") White wine
+        li
+          a(href="#") Champagne
+        li
+          a(href="#") Australian wine
+        li
+          a(href="#") Weekly specials
+    .footer_section
+      h3 Contact
+      address 380 Lonsdale street
+        br 
+        | Melbourne, Victoria
+      p 
+        a(href="tel:1300025959") 1300 025 959 
+      p 
+        a(href="hello@winemerchant.com") hello@winemerchant.com
+      .social-panel
+        span
+          i.fab.fa-facebook-f
+        span
+          i.fab.fa-twitter
+        span
+          i.fab.fa-linkedin-in
+        span
+          i.fab.fa-instagram
+        span
+          i.fab.fa-youtube
+      
 

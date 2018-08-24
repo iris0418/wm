@@ -46,10 +46,9 @@ $black: #000;
 .nav {
     width:100%;
     display:block;
-    height:109px;
+    height:95px;
     background-color: $color__header_bg;
     margin:auto;
-    // text-align:center;
     display:flex;
     flex-wrap: nowrap;
     justify-content:space-between;
@@ -88,7 +87,7 @@ $black: #000;
                     top:-12px;
                     left:-4px;
                     color:$white;
-                    font-family: Lato;
+                    font-family: 'Lato', sans-serif;
                     font-size: 14px;
                     line-height:24px;
                     padding:3px 5px 4px 4px;
@@ -100,7 +99,7 @@ $black: #000;
             text-decoration: none;
             display:inline-block;
             color: $color__nav__font;
-            font-family: Lato;
+            font-family: 'Lato', sans-serif;
             font-size: 1rem;
             text-transform: uppercase;
             margin:0.5rem;
@@ -115,12 +114,16 @@ $black: #000;
 .hero-png {
 	max-height: 548px;
     width: 100%;
-    background:url('../../images/hero.png') no-repeat;
+    background: url('../../images/hero.png') no-repeat;
     background-size: cover;
     text-align: center;
     padding-top:155px;
     display:flex;
     flex-direction:column;
+    
+    & *{
+        z-index: 2;
+    }
 
     h1 {
         min-height: 110px;
@@ -139,7 +142,7 @@ $black: #000;
         margin: 39px auto 118px;
         display:block;
         p {
-            font-family: Lato;
+            font-family: 'Lato', sans-serif;
             font-size: 1em;
             color: $white;
             text-align: center;
