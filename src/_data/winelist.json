@@ -1,0 +1,82 @@
+[
+    {
+        "name":"wine-01",
+        "brand":"The Tamar",
+        "title":"Pinot Noir 2015",
+        "price":24.95,
+        "caseprice":149.95,
+        "desc":"",
+        "rate":4,
+        "noOfReviews":13
+    },
+    {
+        "name":"wine-02",
+        "brand":"Tait",
+        "title":"Chardonnay 2012",
+        "price":24.95,
+        "caseprice":149.95,
+        "desc":"",
+        "rate":3,
+        "noOfReviews":12
+    },
+    {
+        "name":"wine-03",
+        "brand":"Penfolds",
+        "title":"Pinot Noir 2017",
+        "price":24.95,
+        "caseprice":149.95,
+        "desc":"",
+        "rate":4,
+        "noOfReviews":13
+    },
+    {
+        "name":"wine-04",
+        "brand":"Wolf",
+        "title":"Pinot Noir 2018",
+        "price":24.95,
+        "caseprice":149.95,
+        "desc":"",
+        "rate":4,
+        "noOfReviews":13
+    },
+    {
+        "name":"wine-05",
+        "brand":"Wolf",
+        "title":"Sauvignon Blanc 2011",
+        "price":24.95,
+        "caseprice":149.95,
+        "desc":"",
+        "rate":4,
+        "noOfReviews":13
+    },
+    {
+        "name":"wine-06",
+        "brand":"Penfolds",
+        "title":"Pinot Noir 2018",
+        "price":24.95,
+        "caseprice":149.95,
+        "desc":"",
+        "rate":4,
+        "noOfReviews":13
+    },
+    {
+        "name":"wine-07",
+        "brand":"South Island",
+        "title":"Blanc 2012",
+        "price":24.95,
+        "caseprice":149.95,
+        "desc":"",
+        "rate":4,
+        "noOfReviews":13
+    },
+    {
+        "name":"wine-08",
+        "brand":"Jacob's Creek",
+        "title":"Riesling 2010",
+        "price":24.95,
+        "caseprice":149.95,
+        "desc":"",
+        "rate":4,
+        "noOfReviews":13
+    }
+]

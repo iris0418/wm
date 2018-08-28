@@ -1,0 +1,41 @@
+// section styles
+
+section{
+    background-color: $white;
+    clear:both;
+    max-width: 85%;
+    margin:0 auto;
+}
+.section__title {
+    color: #1A2C59;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2rem;
+    float:left;
+
+    & + a{
+        color: #162956;
+        font-family: Lato;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        float:right;
+        text-decoration: none;
+        &::after{
+            content:"\f061";
+            font-family: 'FontAwesome';
+            font-style: normal;
+            font-weight: 900;
+            padding-left:3px;
+        }
+    }
+}
+
+.wines__panel{
+    display:flex;
+    
+    .wine__item{
+        display:inline-block;
+        width:25%;
+    }
+}

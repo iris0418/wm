@@ -19,3 +19,17 @@ mixin navlist(nav_list)
             ul
                 each nav_list_lv2 in nav_list.sub
                     +navlist(nav_list_lv2)
+
+
+mixin wines(wine)
+    .wine__item 
+        img(src='images/#{wine.name}.png')
+        h4.wine__title 
+            strong #{wine.brand} 
+            | #{wine.title}
+        .wine__desc $wine.price
+        | bottle  
+        | $#{wine.caseprice} 
+        | case
+        .wine__rate
+        .wine__review #{wine.noOfReviews} reviews
