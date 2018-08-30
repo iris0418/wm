@@ -23,13 +23,33 @@ mixin navlist(nav_list)
 
 mixin wines(wine)
     .wine__item 
-        img(src='images/#{wine.name}.png')
-        h4.wine__title 
+        img(src='images/#{wine.name}.png',title="#{wine.name}")
+        .wine__title 
             strong #{wine.brand} 
             | #{wine.title}
-        .wine__desc $wine.price
-        | bottle  
-        | $#{wine.caseprice} 
-        | case
+        .wine__price
+            span $#{wine.price} bottle  
+            span $#{wine.caseprice} case
         .wine__rate
-        .wine__review #{wine.noOfReviews} reviews
+            - var i= 0
+            while i < wine.rate
+                span.star.active
+                - i++
+            while i >= wine.rate && i < 5
+                span.star
+                - i++
+            span.wine__review #{wine.noOfReviews} reviews
+        a(href="#").view__btn VIEW WINE
+        a(href="#").addToCart__btn ADD TO CART
+
+
+mixin recipesItem(imgurl,imgtitle,title,desc,linktitle, link)
+    .recipes__item
+        .recipe__img
+            img(src= imgurl, alt= imgtitle, title= imgtitle)
+            .img__title= imgtitle
+        h5= title
+        .recipe__desc= desc
+        a(href="#{link}").recipe__link= linktitle
+
+    

@@ -198,19 +198,8 @@ $black: #000;
         }
         .search__btn {
             @include btn;
-            // display:inline-block;
             height: 48px;
             width: 120px;
-            // background-color: $color__cart-count;
-            // font-family: Lato;
-            // font-size: 1em;
-            // text-align: center;
-            // color:$white;
-            // margin-left: 1em;
-            // border:none;
-            // &:hover {
-            //     background-color: darken($color__cart-count,20);
-            // }
         }
     }
 }
