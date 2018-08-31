@@ -23,7 +23,7 @@ mixin navlist(nav_list)
 
 mixin wines(wine)
     .wine__item 
-        img(src='images/#{wine.name}.png',title="#{wine.name}")
+        img(src='images/#{wine.name}.png',title="#{wine.brand} #{wine.title}")
         .wine__title 
             strong #{wine.brand} 
             | #{wine.title}
@@ -45,11 +45,16 @@ mixin wines(wine)
 
 mixin recipesItem(imgurl,imgtitle,title,desc,linktitle, link)
     .recipes__item
-        .recipe__img
+        figure.recipe__img.clearfix
             img(src= imgurl, alt= imgtitle, title= imgtitle)
             .img__title= imgtitle
         h5= title
         .recipe__desc= desc
         a(href="#{link}").recipe__link= linktitle
 
-    
+mixin wmfan(imgurl,profileimgurl,name)
+    figure.wmfan
+        img(src= "../../images/#{imgurl}.png",alt= name)
+        img(src= "../../images/#{profileimgurl}.png",alt= name)
+        a(href="#")= name
+        

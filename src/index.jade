@@ -4,6 +4,22 @@ include _modules/section/section
 
 block content
     +header()
-    +section('wines')(title='wines').clearfix
-    +section('recipes')(title="Food and Wine from Jo's cookbook").clearfix
+    +section('wines').clearfix
+    section.advice__panel
+        .advice
+            h3 Need advice from our experts?
+            p Let our expert wine connoisseurs guide you to making the best purchase decision. The experts are here to help you choose your wine.
+            a(href="") GET EXPERT ADVICE
+    +section('recipes').clearfix
+    section.fans__panel
+        h3.section__title Our Wine Merchant fans
+        p Follow and connect with them on Instagram to share all of your wine tips.
+        .section_wmfans
+            +wmfan("fan-01","profile-01","@janekemp")
+            +wmfan("fan-02","profile-02","@becmiller")
+            +wmfan("fan-03","profile-03","@garypayton")
+            +wmfan("fan-04","profile-04","@tessgrey")
+            +wmfan("fan-05","profile-05","@shawnkemp")
+            +wmfan("fan-06","profile-06","@emilyloz")
+
   

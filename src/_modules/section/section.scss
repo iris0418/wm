@@ -7,55 +7,64 @@
         display: table;
     }
 }
+
+a{
+    text-decoration: none !important;
+}
 section{
     background-color: $white;
     max-width: 85%;
-    margin:0 auto;
-}
-.section__title {
-    color: #1A2C59;
-    font-family: Montserrat;
-    font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 2rem;
-    float:left;
-    margin-bottom:50px;
+    margin:30px auto 10px;
+    font-family: 'Montserrat', sans-serif;
 
-    & + a{
-        color: #162956;
-        font-family: Lato;
-        font-size: 1rem;
-        line-height: 1.5rem;
-        float:right;
-        text-decoration: none;
-        &::after{
-            content:"\f061";
-            font-family: 'FontAwesome';
-            font-style: normal;
-            font-weight: 900;
-            padding-left:3px;
+    .section__title {
+        color: #1A2C59;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 2rem;
+        float:left;
+        margin-bottom: 30px; 
+    
+        & + a{
+            color: #162956;
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            float:right;
+            text-decoration: none;
+            &::after{
+                content:"\f061";
+                font-family: 'FontAwesome';
+                font-style: normal;
+                font-weight: 900;
+                padding-left:3px;
+            }
         }
     }
 }
+
 
 .wines__panel{
     display:flex;
     flex-wrap: wrap;
     align-items: center;
-    align-content:center;
+    align-content:space-between;
+    justify-content: flex-start;
 
     .wine__item{
         align-self: center;
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;
         flex-direction: column;
         align-items: center;
-        flex: 1 1 auto;
+        align-content: stretch;
+        flex: 1 0 auto;
         text-align: center;
         padding:20px 10px;
-        width:25%;
-        min-height: 467px;
-        min-width: 220px;
-        max-width: 330px;
+        width:24%;
+        // min-height: 450px;
+        min-width: 260px;
+        max-width: 300px;
 
         img{
             margin:0 auto 20px;
@@ -124,41 +133,175 @@ section{
     }
 }
 
-.recipes__panel{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+.advice__panel{
+    max-width:100%;
+    width:100%;
+    background-image: url("../../images/experts.png");
+    min-height: 300px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    display: flex;
+    margin-bottom:140px;
 
-.recipes__item{
-    align-self: center;
-    display:flex;
-    flex-wrap: wrap;
-    flex:1 1 auto;
-    width:33%;
-    .recipe__img{
-        text-align: center;
+    .advice{
+        @extend .shadow__box;
+        align-self: flex-end;
+        width: 670px;
+        padding: 40px;
         position: relative;
-        width: 100%;
-        max-width:300px;
-        min-height: 230px;
-        vertical-align: middle;
-        img{
-            width:100%;
-            position: absolute;
-            top:0;
-            left:0;
+        left:14%;
+        margin-bottom:-100px;
+        h3{
+            font-size: 2rem;
+            line-height: 2rem;
+            color: #1A2C59;
+            font-weight: 300;
+            margin-bottom: 24px;
         }
-        .img__title{
-            width:100%;
-            font-size:2rem;
-            color:$white;
-            text-transform: uppercase;
-            position: absolute;
-            top:45%;
-            left:0;
+        p{
+            font-size: 1rem;
+            line-height: 24px;
+        }
+        a{
+            @include btn;
+            padding:10px 25px;
+            margin: 30px 0 0;
         }
     }
     
+}
+
+.recipes__panel{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    .recipes__item{
+        align-self: stretch;
+        display:flex;
+        flex-wrap: wrap;
+        flex:1 0 auto;
+        max-width: 33%;
+        min-width: 300px;
+        justify-content: space-between;
+        padding:0 25px 25px;
+    
+        .recipe__img{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            margin:auto -25px;
+                
+            img{
+                width:100%;  
+            }
+    
+            .img__title{
+                font-size:2rem;
+                color:$white;
+                text-transform: uppercase;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        h5 {
+            font-size:1.125rem;
+            font-weight: 500;
+            margin-bottom:1rem;
+        }
+        .recipe__desc {
+            opacity: 0.8;
+            font-size:1rem;
+            margin-bottom:24px;
+        }
+        .recipe__link{
+            color: #162956;
+            font-family: 'Lato', sans-serif;
+            font-size:1rem;
+            text-transform: uppercase;
+            line-height: 24px;
+    
+            &::after{
+                content:"\f061";
+                font-family: 'FontAwesome';
+                font-weight: 900;
+                padding-left:5px;
+                text-decoration: none;
+            }
+
+        }
+    
+    }
 
 }
+
+.fans__panel{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin:60px auto;
+    text-align: center;
+    h3{
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: 300;
+        margin: 0 auto;
+        &+p{
+            max-width: 356px;
+            opacity: 0.8;
+            font-size: 1rem;
+            line-height: 24px;
+            margin:20px auto;
+        }
+    }
+}
+
+.section_wmfans{
+    width:80%;
+    display:flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+
+    .wmfan{
+        display: flex;
+        flex-wrap:column;
+        flex-wrap: wrap;
+        justify-content:center;
+        padding:15px;
+        text-align: center;
+        animation:slide 2s linear infinite;
+
+        img:last-of-type{
+            position: relative;
+            margin-top:-28px;
+        }
+
+        a{
+            width:100%;
+            margin:10px auto auto;
+            font-size:1.125rem;
+            font-weight: 500;
+            color:$black;
+        }
+    }
+}
+
+@keyframes slide {
+    0%{
+      transform: translate3d(0, 0, 0);
+    }
+    100%{
+      transform: translate3d(-300px, 0, 0);
+    }
+  }
