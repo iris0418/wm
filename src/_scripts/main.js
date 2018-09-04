@@ -8,26 +8,40 @@
 $(() => {
   var sliderun;
   var slideFunc = function(){
-    if($('.section_wmfans .wmfan').first().position().left <= '0'){
-      var $this = $('.section_wmfans .wmfan').first();
-      var itemNum =$('.section_wmfans .wmfan').length*2;
-      $this.clone().appendTo($this.parent());
-      // $this.remove();
-      $('.wmfan').each(function() {
-        // 
-        if($('.wmfan')<itemNum)
-        $(this).clone().appendTo($this.parent());
-        $(this).animate({'left':'-=300'},2000);
-      });
-    }
+    $('.section_wmfans .wmfan').each(function(){
+      console.log('position----'+$(this).position().left);
+      console.log('offset----'+$(this).offset().left);
+      var $this = $(this);
+      // $this.css('transform','translateX(-300px)');
+      $this.animate({'left':'-=300'},2000);
+      if($this.position().left <= '0'){
+        $this.clone().appendTo($this.parent());
+        $this.remove();
+        // $('.section_wmfans .wmfan').not($this).animate({'left':'-=300'},2000);
+      } else{ 
+        // $('.section_wmfans .wmfan').animate({'left':'-=300'},2000);
+      }
+    });
+    // if($('.section_wmfans .wmfan').position().left <= '0'){
+    //   var $this = $('.section_wmfans .wmfan').first();
+    //   $this.hide().animate({'left':'+=1800'},2000).show();
+    //   // $this.clone().appendTo($this.parent());
+    //   // $this.remove();
+    //   $('.wmfan').each(function() {
+    //     $(this).animate({'left':'-=300'},2000);
+    //   });
+    // }
   };
-  sliderun = setInterval(slideFunc,2000);
+  // sliderun = setInterval(slideFunc,2000);
   // $('.section_wmfans .wmfan').hover(function(){
-  //   console.log(111111);
-  //   clearInterval(sliderun);
-  // },function(){
+  //   console.log('this position   '+$(this).position().left );
+  //   console.log('this offset  '+$(this).offset().left );
+  //   // clearInterval(sliderun);
+  // }
+  // ,function(){
   //   console.log(2222);
   //   sliderun = setInterval(slideFunc,2000);
-  // });
+  // }
+// );
 
 });

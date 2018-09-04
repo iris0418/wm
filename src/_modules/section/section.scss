@@ -279,15 +279,16 @@ section{
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
 
     .wmfan{
         flex:1 0 auto;
         padding:15px;
         text-align: center;
         position: relative;
-        overflow: hidden;
-        animation: slide 12s linear infinite;
+        // overflow: hidden;
+        // width:300px;
+        // animation: slide 12s linear infinite;
 
         img:last-of-type{
             position: relative;
@@ -305,14 +306,14 @@ section{
     }
 }
 
-@keyframes slide {
-    0%{
-      transform: translate3d(0, 0, 0);
-    }
-    100%{
-      transform: translate3d(-1800px, 0, 0);
-    }
-    // 100%{
-    //   width: 0;
-    // }
-  }
+// @keyframes slide {
+//     0%{
+//       transform: translate3d(0, 0, 0);
+//     }
+//     100%{
+//       transform: translate3d(-300px, 0, 0);
+//     }
+//     // 100%{
+//     //   width: 0;
+//     // }
+//   }
