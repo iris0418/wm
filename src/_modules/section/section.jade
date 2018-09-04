@@ -3,21 +3,20 @@ mixin section(spec)
   - spec.__class = spec.__class || ''
 
   section(class=spec.__class)&attributes(attributes)
-    section
-      if(spec == 'wines')
-        .clearfix
-          h3.section__title This week at the Wine Merchant
-          a(href='#') VIEW ALL WINES
-        .wines__panel
-          each wine in site.data.winelist
-            +wines(wine)
-      if(spec == 'recipes')
-        .clearfix
-          h3.section__title Food &amp; Wine from Jo’s cookbook
-          a(href='#') VIEW ALL RECIPES
-        .recipes__panel
-          +recipesItem('../../images/pasta.png','pasta','Pasta florentine','Creamy mushrooms and peppery parmesan make this classic pasta florentine a dinner.','view pasta folrentine','#')
-          +recipesItem('../../images/pizza.png','pizza','Vegetarian pizza','Pizza mushrooms and peppery parmesan make this classic pasta.','view vegetarian pizza','#')
-          +recipesItem('../../images/salmon.png','salmon','Smoked salmon','BBQ salmon mushrooms peppery parmesan make this classic for dinner tonight.','view smoked salmon','#')
+    if(spec == 'wines')
+      .clearfix
+        h3.section__title This week at the Wine Merchant
+        a(href='#') VIEW ALL WINES
+      .wines__panel
+        each wine in site.data.winelist
+          +wines(wine)
+    if(spec == 'recipes')
+      .clearfix
+        h3.section__title Food &amp; Wine from Jo’s cookbook
+        a(href='#') VIEW ALL RECIPES
+      .recipes__panel
+        +recipesItem('../../images/pasta.png','pasta','Pasta florentine','Creamy mushrooms and peppery parmesan make this classic pasta florentine a dinner.','view pasta folrentine','#')
+        +recipesItem('../../images/pizza.png','pizza','Vegetarian pizza','Pizza mushrooms and peppery parmesan make this classic pasta.','view vegetarian pizza','#')
+        +recipesItem('../../images/salmon.png','salmon','Smoked salmon','BBQ salmon mushrooms peppery parmesan make this classic for dinner tonight.','view smoked salmon','#')
        
 

@@ -3,22 +3,31 @@
 
 'use strict';
 
-import $ from 'jquery';
+// import $ from 'jquery';
 
 $(() => {
-  // setInterval(function(){
-  //   var $this = $('.section_wmfans .wmfan:last-of-type');
-  //   var $next = $this.parent().children().first();
-  //   $next.clone().appendTo($this.parent()).fadeIn();
-  //   $('.section_wmfans').find(' .wmfan').css('animation','slide 2s linear infinite');
-  //   $this.siblings('.wmfan:first').remove();
-  // },2000);
-    
-  (function(){ 
-    var $this = $('.section_wmfans .wmfan:last-of-type');
-    var $next = $this.parent().children().first();
-    $next.clone().appendTo($this.parent()).fadeIn();
-    $('.section_wmfans').find(' .wmfan');
-    $this.siblings('.wmfan:first').remove();
-  })();
+  var sliderun;
+  var slideFunc = function(){
+    if($('.section_wmfans .wmfan').first().position().left <= '0'){
+      var $this = $('.section_wmfans .wmfan').first();
+      var itemNum =$('.section_wmfans .wmfan').length*2;
+      $this.clone().appendTo($this.parent());
+      // $this.remove();
+      $('.wmfan').each(function() {
+        // 
+        if($('.wmfan')<itemNum)
+        $(this).clone().appendTo($this.parent());
+        $(this).animate({'left':'-=300'},2000);
+      });
+    }
+  };
+  sliderun = setInterval(slideFunc,2000);
+  // $('.section_wmfans .wmfan').hover(function(){
+  //   console.log(111111);
+  //   clearInterval(sliderun);
+  // },function(){
+  //   console.log(2222);
+  //   sliderun = setInterval(slideFunc,2000);
+  // });
+
 });
